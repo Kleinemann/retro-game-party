@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci2thmhhg2jlq"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_dq7l7"]
+[ext_resource type="Texture2D" uid="uid://flldd6hefxxi" path="res://assets/titel.png" id="1_xc2yy"]
+[ext_resource type="AudioStream" uid="uid://dg1faicjf8d33" path="res://assets/airport-lounge-kevin-macleod-main-version-05-07-12946.mp3" id="3_wu0k1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dq7l7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.12549)
+scale = Vector2(1.12305, 1.15071)
+texture = ExtResource("1_xc2yy")
+centered = false
+
+[node name="ilGames" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 26.0
+offset_right = 415.0
+offset_bottom = 639.0
+allow_search = false
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 535.0
+offset_right = 749.0
+offset_bottom = 633.0
+theme_override_font_sizes/font_size = 50
+text = "START"
+
+[node name="ilPlayer" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 244.0
+offset_right = 745.0
+offset_bottom = 524.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wu0k1")
+
+[connection signal="pressed" from="Button" to="." method="OnButtonPressed"]

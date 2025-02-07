@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://blpeu3cxa7d6d"]
+
+[ext_resource type="Script" path="res://games/blocks/Main_blocks.cs" id="1_ol18h"]
+[ext_resource type="AudioStream" uid="uid://byylkqiqgkkfj" path="res://games/blocks/assets/mischief-maker-kevin-macleod-main-version-8452-03-21.mp3" id="2_5f6kc"]
+[ext_resource type="PackedScene" uid="uid://dy5dxf17p616" path="res://games/blocks/stacker.tscn" id="3_apjt4"]
+[ext_resource type="Texture2D" uid="uid://dtdo3y1b8h3hs" path="res://games/blocks/assets/tet_back.png" id="4_4n84w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68cja"]
+albedo_texture = ExtResource("4_4n84w")
+
+[sub_resource type="QuadMesh" id="QuadMesh_6dwix"]
+material = SubResource("StandardMaterial3D_68cja")
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_ol18h")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 20)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_5f6kc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.777761, 0.628561, 0, -0.628561, 0.777761, 0, 3.4207, 5.11238)
+
+[node name="Stacker" parent="." instance=ExtResource("3_apjt4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 0)
+
+[node name="Stacker2" parent="." instance=ExtResource("3_apjt4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5, 0, 0)
+
+[node name="Stacker3" parent="." instance=ExtResource("3_apjt4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 0)
+
+[node name="Stacker4" parent="." instance=ExtResource("3_apjt4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 0)
+
+[node name="background" type="MeshInstance3D" parent="."]
+transform = Transform3D(70, 0, 0, 0, 36, 0, 0, 0, 1, 0, 10, -3)
+mesh = SubResource("QuadMesh_6dwix")
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player1Name" type="Label" parent="GUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="NextBlock" type="Label" parent="GUI/Player1Name"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

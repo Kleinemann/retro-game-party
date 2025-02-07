@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Retro Game Party": {
+      "commandName": "Project"
+    },
+    "Profil \"1\"": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Worspace_Godot\\Godot_v4.3-stable_mono_win64\\Godot_v4.3-stable_mono_win64.exe",
+      "commandLineArgs": "--path . --verbose",
+      "workingDirectory": ".",
+      "nativeDebugging": true
+    }
+  }
+}

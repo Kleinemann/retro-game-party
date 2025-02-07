@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuwpolpo3lqg2"]
+
+[ext_resource type="Script" path="res://games/blocks/Block.cs" id="1_mc2lx"]
+
+[node name="Block" type="Node3D"]
+script = ExtResource("1_mc2lx")
