@@ -14,9 +14,12 @@ public partial class Main_blocks : Node3D
         Players.Add((Stacker)FindChild("Stacker3"));
         Players.Add((Stacker)FindChild("Stacker4"));
 
+        int pNr = 1;
         foreach (var p in Players)
         {
             p.RowFinishEvent += P_RowFinishEvent;
+            p.PlayerNr = pNr;
+            pNr++;
         }
     }
 

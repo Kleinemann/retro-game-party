@@ -22,6 +22,23 @@ public partial class Stacker : Node3D
 
     Dictionary<Vector3, Node3D> Grid = new Dictionary<Vector3, Node3D>();
 
+    int _playerNr = -1;
+    public int PlayerNr
+    {
+        get { return _playerNr; }
+        set { 
+            _playerNr = value;
+            KeyUp = $"P{_playerNr}_UP";
+            KeyDown = $"P{_playerNr}_DOWN";
+            KeyLeft = $"P{_playerNr}_LEFT";
+            KeyRight = $"P{_playerNr}_RIGHT";
+        }
+    }
+
+    public string KeyUp;
+    public string KeyDown;
+    public string KeyLeft;
+    public string KeyRight;
 
     public event RowFinishEventHandler RowFinishEvent;
 
@@ -133,16 +150,16 @@ public partial class Stacker : Node3D
         if (GameState != StateEnum.RUNNING || CurrentBlock == null)
             return;
 
-        if(Input.IsActionPressed("ui_up"))
+        if(Input.IsActionPressed(KeyUp))
             RotateBlock();
 
-        if (Input.IsActionPressed("ui_right"))
+        if (Input.IsActionPressed(KeyRight))
             CheckAndMove(new Vector3(1, 0, 0));
 
-        if (Input.IsActionPressed("ui_left"))
+        if (Input.IsActionPressed(KeyLeft))
             CheckAndMove(new Vector3(-1, 0, 0));
 
-        if (Input.IsActionPressed("ui_down"))
+        if (Input.IsActionPressed(KeyDown))
             CheckAndMove(new Vector3(0, -1, 0));
     }
 
