@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Worspace_Godot\\retro-game-party\\",
+  "WorkspaceRootPath": "C:\\Workspace\\retro-game-party\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\worspace_godot\\retro-game-party\\games\\blocks\\main_blocks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|solutionrelative:games\\blocks\\main_blocks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\worspace_godot\\retro-game-party\\games\\blocks\\stacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\workspace\\retro-game-party\\games\\blocks\\stacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|solutionrelative:games\\blocks\\stacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:games\\blocks\\Block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\workspace\\retro-game-party\\games\\blocks\\main_blocks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|solutionrelative:games\\blocks\\main_blocks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\worspace_godot\\retro-game-party\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\workspace\\retro-game-party\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|solutionrelative:settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\workspace\\retro-game-party\\games\\blocks\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|solutionrelative:games\\blocks\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,54 +26,52 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Stacker.cs",
-              "DocumentMoniker": "C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Stacker.cs",
+              "DocumentMoniker": "C:\\Workspace\\retro-game-party\\games\\blocks\\Stacker.cs",
               "RelativeDocumentMoniker": "games\\blocks\\Stacker.cs",
-              "ToolTip": "C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Stacker.cs",
+              "ToolTip": "C:\\Workspace\\retro-game-party\\games\\blocks\\Stacker.cs",
               "RelativeToolTip": "games\\blocks\\Stacker.cs",
-              "ViewState": "AgIAANQAAAAAAAAAAAAAwIQAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T11:20:18.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Settings.cs",
-              "DocumentMoniker": "C:\\Worspace_Godot\\retro-game-party\\Settings.cs",
+              "DocumentMoniker": "C:\\Workspace\\retro-game-party\\Settings.cs",
               "RelativeDocumentMoniker": "Settings.cs",
-              "ToolTip": "C:\\Worspace_Godot\\retro-game-party\\Settings.cs",
+              "ToolTip": "C:\\Workspace\\retro-game-party\\Settings.cs",
               "RelativeToolTip": "Settings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T15:49:11.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T15:49:11.646Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Block.cs",
-              "DocumentMoniker": "C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Block.cs",
+              "DocumentMoniker": "C:\\Workspace\\retro-game-party\\games\\blocks\\Block.cs",
               "RelativeDocumentMoniker": "games\\blocks\\Block.cs",
-              "ToolTip": "C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Block.cs",
+              "ToolTip": "C:\\Workspace\\retro-game-party\\games\\blocks\\Block.cs",
               "RelativeToolTip": "games\\blocks\\Block.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAowF4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T15:41:31.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T15:41:31.219Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Main_blocks.cs",
-              "DocumentMoniker": "C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Main_blocks.cs",
+              "DocumentMoniker": "C:\\Workspace\\retro-game-party\\games\\blocks\\Main_blocks.cs",
               "RelativeDocumentMoniker": "games\\blocks\\Main_blocks.cs",
-              "ToolTip": "C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Main_blocks.cs",
+              "ToolTip": "C:\\Workspace\\retro-game-party\\games\\blocks\\Main_blocks.cs",
               "RelativeToolTip": "games\\blocks\\Main_blocks.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
