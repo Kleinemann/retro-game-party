@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dy5dxf17p616"]
+[gd_scene load_steps=9 format=3 uid="uid://dy5dxf17p616"]
 
 [ext_resource type="Script" path="res://games/blocks/Stacker.cs" id="1_381su"]
 [ext_resource type="Material" uid="uid://b013jx3pledc6" path="res://games/blocks/stacker.tres" id="1_aqkor"]
+[ext_resource type="Script" path="res://games/blocks/Ki.cs" id="3_nbi27"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7yhwi"]
 material = ExtResource("1_aqkor")
@@ -45,3 +46,6 @@ mesh = SubResource("BoxMesh_bjccm")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="right"]
 transform = Transform3D(0.5, 0, 0, 0, 20, 0, 0, 0, 1, 4.75, 9.5, 0)
 mesh = SubResource("BoxMesh_jgvfk")
+
+[node name="KI" type="Node3D" parent="."]
+script = ExtResource("3_nbi27")

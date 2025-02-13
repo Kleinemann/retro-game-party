@@ -9,7 +9,7 @@ public partial class Main_blocks : Node3D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Players.Add((Stacker)FindChild("Stacker"));
+		Players.Add((Stacker)FindChild("Stacker1"));
         Players.Add((Stacker)FindChild("Stacker2"));
         Players.Add((Stacker)FindChild("Stacker3"));
         Players.Add((Stacker)FindChild("Stacker4"));
@@ -18,7 +18,24 @@ public partial class Main_blocks : Node3D
         foreach (var p in Players)
         {
             p.RowFinishEvent += P_RowFinishEvent;
+
             p.PlayerNr = pNr;
+
+            if (p.PlayerNr == 1)
+                p.PlayerType = PlayerTypeEnum.HUMAN;
+
+            if (p.PlayerNr == 2)
+                p.PlayerType = PlayerTypeEnum.Ki1;
+
+            if (p.PlayerNr == 3)
+                p.PlayerType = PlayerTypeEnum.Ki2;
+
+            if (p.PlayerNr == 4)
+                p.PlayerType = PlayerTypeEnum.Ki3;
+
+            p.AddRow();
+            p.GameState = StateEnum.RUNNING;
+
             pNr++;
         }
     }

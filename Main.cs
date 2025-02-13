@@ -1,17 +1,17 @@
 using Godot;
 using System.Collections.Generic;
 
-public enum PlayerType { NONE, HUMAN, Ki1, Ki2, Ki3};
+public enum PlayerTypeEnum { NONE, HUMAN, Ki1, Ki2, Ki3};
 
 
 public static class MainSettings
 {
-    public static Godot.Collections.Dictionary<string, PlayerType> Players { get; set; } = new Godot.Collections.Dictionary<string, PlayerType>()
+    public static Godot.Collections.Dictionary<string, PlayerTypeEnum> Players { get; set; } = new Godot.Collections.Dictionary<string, PlayerTypeEnum>()
     {
-        { "Hans", PlayerType.HUMAN },
-        { "Franz", PlayerType.Ki1 },
-        { "Marry", PlayerType.Ki2 },
-        { "Lee", PlayerType.Ki3 }
+        { "Hans", PlayerTypeEnum.HUMAN },
+        { "Franz", PlayerTypeEnum.Ki1 },
+        { "Marry", PlayerTypeEnum.Ki2 },
+        { "Lee", PlayerTypeEnum.Ki3 }
     };
 }
 
@@ -45,17 +45,17 @@ public partial class Main : Control
         }
 
         player = GetNode<ItemList>("ilPlayer");
-        foreach(KeyValuePair<string, PlayerType> pair in MainSettings.Players)
+        foreach(KeyValuePair<string, PlayerTypeEnum> pair in MainSettings.Players)
         {
-            if (pair.Value == PlayerType.NONE)
+            if (pair.Value == PlayerTypeEnum.NONE)
                 continue;
 
             string avatar = "player";
-            if (pair.Value == PlayerType.Ki1)
+            if (pair.Value == PlayerTypeEnum.Ki1)
                 avatar = "ki1";
-            else if (pair.Value == PlayerType.Ki2)
+            else if (pair.Value == PlayerTypeEnum.Ki2)
                 avatar = "ki2";
-            else if (pair.Value == PlayerType.Ki3)
+            else if (pair.Value == PlayerTypeEnum.Ki3)
                 avatar = "ki3";
 
             player.AddItem(pair.Key, Helper.CreateTexture("res://assets/avatare/" + avatar + ".png"));

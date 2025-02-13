@@ -23,7 +23,7 @@ stream = ExtResource("2_5f6kc")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.777761, 0.628561, 0, -0.628561, 0.777761, 0, 3.4207, 5.11238)
 
-[node name="Stacker" parent="." instance=ExtResource("3_apjt4")]
+[node name="Stacker1" parent="." instance=ExtResource("3_apjt4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 0)
 
 [node name="Stacker2" parent="." instance=ExtResource("3_apjt4")]

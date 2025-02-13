@@ -20,7 +20,24 @@ public partial class Stacker : Node3D
     public Block CurrentBlock = null;
     public Block NextBlock = null;
 
+    public Ki _KI;
+
     Dictionary<Vector3, Node3D> Grid = new Dictionary<Vector3, Node3D>();
+
+    public PlayerTypeEnum _playerType = PlayerTypeEnum.NONE;
+    public PlayerTypeEnum PlayerType
+    {  get { return _playerType; } 
+        set { 
+            _playerType = value;
+            if (_playerType == PlayerTypeEnum.Ki1 || _playerType == PlayerTypeEnum.Ki1 || _playerType == PlayerTypeEnum.Ki1)
+            {
+                _KI = (Ki)FindChild("KI");
+                _KI.InitKI(PlayerType);
+            }
+            else
+                _KI = null;
+        }
+    }
 
     int _playerNr = -1;
     public int PlayerNr
@@ -99,16 +116,12 @@ public partial class Stacker : Node3D
         material.Transparency = BaseMaterial3D.TransparencyEnum.Alpha;
 
         AddChild(m);
-
-        AddRow();
-
-        GameState = StateEnum.RUNNING;
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
 	{
-        if(GameState != StateEnum.RUNNING)
+        if(PlayerType == PlayerTypeEnum.NONE || GameState != StateEnum.RUNNING)
                 return;
 
         if(NextBlock == null)
@@ -312,7 +325,7 @@ public partial class Stacker : Node3D
     }
 
 
-    void RotateBlock()
+    public void RotateBlock()
     {
         if (CurrentBlock.Shape == BlockShape.O)
             return;
