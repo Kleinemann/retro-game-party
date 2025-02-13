@@ -10,9 +10,9 @@ public partial class Stacker : Node3D
 {
     public StateEnum GameState = StateEnum.NONE;
 
-    static int maxRows = 20;
-    static int minCols = -5;
-    static int maxCols = 4;
+    public static int maxRows = 20;
+    public static int minCols = -5;
+    public static int maxCols = 4;
 
     public double last_tick = 0;
     public static double Speed = 0.5;
@@ -22,7 +22,7 @@ public partial class Stacker : Node3D
 
     public Ki _KI;
 
-    Dictionary<Vector3, Node3D> Grid = new Dictionary<Vector3, Node3D>();
+    public Dictionary<Vector3, Node3D> Grid = new Dictionary<Vector3, Node3D>();
 
     public PlayerTypeEnum _playerType = PlayerTypeEnum.NONE;
     public PlayerTypeEnum PlayerType

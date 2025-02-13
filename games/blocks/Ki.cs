@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class Ki : Node3D
 {
@@ -79,24 +80,58 @@ public partial class Ki : Node3D
 
     void KI2()
     {
-        int direction = Settings.R.Next(4);
+        Dictionary<int, bool> bricks = GetHighestRow();
+        List<Dictionary<int, bool>> blocks = GetBlockRotations();
 
-        if (direction == 0)
-            stacker.RotateBlock();
 
-        if (direction == 1)
-            stacker.CheckAndMove(new Vector3(1, 0, 0));
-
-        if (direction == 2)
-            stacker.CheckAndMove(new Vector3(-1, 0, 0));
-
-        if (direction == 2)
-            stacker.CheckAndMove(new Vector3(0, -1, 0));
-
+        KI1();
     }
 
     void KI3()
     {
 
+    }
+
+    Dictionary<int, bool> GetHighestRow()
+    {
+        Dictionary<int, bool> bricks = new Dictionary<int, bool>();
+
+        for(int y = Stacker.maxRows; y >= 0; y++)
+        {
+            bool found = false;
+            for (int x = Stacker.minCols; x <= Stacker.maxCols; x++)
+            {
+                if (stacker.Grid[new Vector3(x, y, 0)] != null)
+                    found = true;
+
+            }
+
+            if(found || y == 0)
+            {
+                for (int x = Stacker.minCols; x <= Stacker.maxCols; x++)
+                {
+                    bool hasBrick = stacker.Grid[new Vector3(x, y, 0)] != null;
+                    bricks.Add(x, hasBrick);
+                }
+                break;
+            }
+        }
+        return bricks;
+    }
+
+    List<Dictionary<int, bool>> GetBlockRotations()
+    {
+        List<Dictionary<int, bool>> blocks = new List<Dictionary<int, bool>>();
+
+        for(int r = 0; r < 3; r++)
+        {
+            var children = stacker.CurrentBlock.GetChildren();
+            foreach (Node3D c in children)
+            {
+            }
+            stacker.RotateBlock();
+        }
+        stacker.RotateBlock();
+        return blocks;
     }
 }
