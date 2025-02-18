@@ -88,24 +88,36 @@ public partial class Ki : Node3D
         int bestR;
 
         int r = 0;
+        //Rotation
         foreach(Dictionary<int, int> pair in blocks)
         {
+            //x Position des Blockes
             for (int x = Stacker.minCols; x <= Stacker.maxCols; x++)
             {
                 int value = 0;
 
-                value = bricks[x];
-                if (stacker.Check(new Vector3(x, 0, 0)))
+                //Zeile auslesen mit col als x pos
+                for (int col = Stacker.minCols; col <= Stacker.maxCols; col++)
                 {
                     value = bricks[x];
+                }
 
-                    if (pair.ContainsKey(x))
-                        value += pair[x];
+                if (stacker.Check(new Vector3(x, 0, 0)))
+                {
+                    foreach (KeyValuePair<int, int> p in pair)
+                    {
+
+                        value = bricks[x];
+
+                        if (pair.ContainsKey(x))
+                            value += pair[x];
+                    }
                 }
                 else
-                    value = -10;
+                    value += -10;
 
-                GD.Print("WERT: " + value);
+
+                GD.Print("R: " + r + " X: " + x + " ==> " + value);
             }
 
             r++;
