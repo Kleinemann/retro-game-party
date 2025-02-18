@@ -21,7 +21,7 @@ public partial class Ki : Node3D
         if (stacker != null && (stacker.PlayerType == PlayerTypeEnum.NONE || stacker.GameState != StateEnum.RUNNING))
             return;
 
-        if (last_tick + delta > Speed)
+        if (stacker.CurrentBlock != null && last_tick + delta > Speed)
         {
             KiTick();
             last_tick = 0;
@@ -83,7 +83,32 @@ public partial class Ki : Node3D
         Dictionary<int, bool> bricks = GetHighestRow();
         List<Dictionary<int, bool>> blocks = GetBlockRotations();
 
+        int best;
+        int bestX;
+        int bestR;
 
+        int r = 0;
+        foreach(Dictionary<int, bool> pair in blocks)
+        {
+            for(int x = Stacker.minCols; x <= Stacker.maxCols; x++)
+            {
+                if(stacker.Check(new Vector3(x, 0, 0)))
+                {
+                    string tmpLine = "";
+
+                    foreach(KeyValuePair<int, bool> line in bricks)
+                    {
+                        foreach(KeyValuePair<int, bool> block in pair)
+                        {
+                            if(line.Value)
+                        }
+                    }
+                }
+            }
+
+            r++;
+        }
+        
         KI1();
     }
 
@@ -92,11 +117,13 @@ public partial class Ki : Node3D
 
     }
 
+    
+
     Dictionary<int, bool> GetHighestRow()
     {
         Dictionary<int, bool> bricks = new Dictionary<int, bool>();
 
-        for(int y = Stacker.maxRows; y >= 0; y++)
+        for(int y = Stacker.maxRows-1; y >= 0; y--)
         {
             bool found = false;
             for (int x = Stacker.minCols; x <= Stacker.maxCols; x++)
@@ -123,15 +150,41 @@ public partial class Ki : Node3D
     {
         List<Dictionary<int, bool>> blocks = new List<Dictionary<int, bool>>();
 
-        for(int r = 0; r < 3; r++)
+        for(int r = 0; r < 4; r++)
         {
             var children = stacker.CurrentBlock.GetChildren();
-            foreach (Node3D c in children)
+
+            for(int y = -1; y <= 1; y++)
             {
+                Dictionary<int, bool> block = new Dictionary<int, bool>();
+
+                bool found = false;
+
+                for (int x = -1; x <= 1; x++)
+                {
+                    Vector3 v = new Vector3(x, y, 0);
+                    block.Add(x, false);
+
+                    foreach (Node3D c in children)
+                    {
+                        //GD.Print(v + " => " + c.Position);
+
+                        if (c.Position == v)
+                        {
+                            block[x] = true;
+                            found = true;
+                        }
+                    }                    
+                }
+
+                if(found)
+                {
+                    blocks.Add(block);
+                    break;
+                }
             }
             stacker.RotateBlock();
         }
-        stacker.RotateBlock();
         return blocks;
     }
 }

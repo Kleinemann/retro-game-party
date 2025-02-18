@@ -202,7 +202,7 @@ public partial class Stacker : Node3D
 
     }
 
-    public bool CheckAndMove(Vector3 v)
+    public bool Check(Vector3 v)
     {
         Vector3 p = CurrentBlock.Position;
         var children = CurrentBlock.GetChildren();
@@ -214,9 +214,17 @@ public partial class Stacker : Node3D
                 return false;
         }
 
-        CurrentBlock.Position += v;
-
         return true;
+    }
+
+    public bool CheckAndMove(Vector3 v)
+    {
+        bool ret = Check(v);
+
+        if(ret)
+            CurrentBlock.Position += v;
+
+        return ret;
     }
 
     public bool CheckPosition(Vector3 v)
