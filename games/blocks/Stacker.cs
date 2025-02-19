@@ -287,9 +287,6 @@ public partial class Stacker : Node3D
 
                 if(RowFinishEvent != null)
                     RowFinishEvent(this, EventArgs.Empty);
-
-                if (_KI != null)
-                    _KI._isCalced = false;
             }
         }
     }

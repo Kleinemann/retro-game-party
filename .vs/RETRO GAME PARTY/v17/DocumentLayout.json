@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Worspace_Godot\\retro-game-party\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\worspace_godot\\retro-game-party\\games\\blocks\\stacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|solutionrelative:games\\blocks\\stacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\worspace_godot\\retro-game-party\\games\\blocks\\ki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|solutionrelative:games\\blocks\\ki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\worspace_godot\\retro-game-party\\games\\blocks\\stacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|solutionrelative:games\\blocks\\stacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F72A5848-9FA7-4C94-A3C1-CC7E19B85828}|Retro Game Party.csproj|c:\\worspace_godot\\retro-game-party\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Ki.cs",
               "DocumentMoniker": "C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Ki.cs",
               "RelativeDocumentMoniker": "games\\blocks\\Ki.cs",
               "ToolTip": "C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Ki.cs",
               "RelativeToolTip": "games\\blocks\\Ki.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAmwFgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T12:40:03.442Z",
               "EditorCaption": ""
@@ -63,13 +63,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Stacker.cs",
               "DocumentMoniker": "C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Stacker.cs",
               "RelativeDocumentMoniker": "games\\blocks\\Stacker.cs",
               "ToolTip": "C:\\Worspace_Godot\\retro-game-party\\games\\blocks\\Stacker.cs",
               "RelativeToolTip": "games\\blocks\\Stacker.cs",
-              "ViewState": "AgIAAPgAAAAAAAAAAAAswCMBAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAIwCABAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T11:20:18.74Z",
               "EditorCaption": ""
@@ -84,8 +84,7 @@
               "RelativeToolTip": "Settings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T15:49:11.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T15:49:11.646Z"
             },
             {
               "$type": "Document",
@@ -97,8 +96,7 @@
               "RelativeToolTip": "games\\blocks\\Block.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T15:41:31.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T15:41:31.219Z"
             },
             {
               "$type": "Document",
@@ -110,8 +108,7 @@
               "RelativeToolTip": "games\\blocks\\Main_blocks.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAgwAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:29:54.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T10:29:54.963Z"
             }
           ]
         }

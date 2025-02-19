@@ -25,6 +25,9 @@ public partial class Ki : Node3D
         if (stacker != null && (stacker.PlayerType == PlayerTypeEnum.NONE || stacker.GameState != StateEnum.RUNNING))
             return;
 
+        if (stacker.CurrentBlock == null)
+            _isCalced = false;
+
         if (stacker.CurrentBlock != null && last_tick + delta > Speed)
         {
             KiTick();
