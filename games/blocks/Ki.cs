@@ -9,6 +9,10 @@ public partial class Ki : Node3D
 
     Stacker stacker;
 
+    public bool _isCalced = false;
+    int _r = 0;
+    int _x = 0;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -80,50 +84,87 @@ public partial class Ki : Node3D
 
     void KI2()
     {
-        Dictionary<int, int> bricks = GetHighestRow();
-        List<Dictionary<int, int>> blocks = GetBlockRotations();
-
-        int best = -100;
-        int bestX;
-        int bestR;
-
-        int r = 0;
-        //Rotation
-        foreach(Dictionary<int, int> pair in blocks)
+        if (!_isCalced)
         {
-            //x Position des Blockes
-            for (int x = Stacker.minCols; x <= Stacker.maxCols; x++)
+            Dictionary<int, int> bricks = GetHighestRow();
+            List<Dictionary<int, int>> blocks = GetBlockRotations();
+
+            int best = -1000;
+            int bestX = 0;
+            int bestR = 0;
+
+            int r = 0;
+
+            string bestTmp = "";
+            //Rotation
+            foreach (Dictionary<int, int> pair in blocks)
             {
-                int value = 0;
-
-                //Zeile auslesen mit col als x pos
-                for (int col = Stacker.minCols; col <= Stacker.maxCols; col++)
+                //x Position des Blockes
+                for (int x = Stacker.minCols; x <= Stacker.maxCols; x++)
                 {
-                    value = bricks[x];
-                }
+                    int value = 0;
+                    string tmp = "";
+                    bool blockFits = stacker.Check(new Vector3(x, 0, 0));
 
-                if (stacker.Check(new Vector3(x, 0, 0)))
-                {
-                    foreach (KeyValuePair<int, int> p in pair)
+                    //Zeile auslesen mit col als x pos
+                    for (int col = Stacker.minCols; col <= Stacker.maxCols; col++)
                     {
+                        int v = bricks[col];
 
-                        value = bricks[x];
+                        if (blockFits)
+                        {
+                            foreach (KeyValuePair<int, int> p in pair)
+                            {
+                                if (p.Key + x == col && p.Value > 0)
+                                {
+                                    v = v > 0 ? 0 : 9;
+                                }
+                            }
+                        }
 
-                        if (pair.ContainsKey(x))
-                            value += pair[x];
+                        tmp += v.ToString();
+
+                        value += v;
+                    }
+
+                    if (!blockFits)
+                        value = -100;
+                    //GD.Print("R: " + r + " X: " + x + " ==> " + value);
+
+                    if (value >= best)
+                    {
+                        best = value;
+                        bestX = x;
+                        bestR = r;
+                        bestTmp = tmp;
                     }
                 }
-                else
-                    value += -10;
 
-
-                GD.Print("R: " + r + " X: " + x + " ==> " + value);
+                r++;
             }
 
-            r++;
-        }
+            GD.Print(bestTmp);
+            GD.Print("R: " + bestR + " X: " + bestX + " ==> " + best);
 
-        GD.Print("BLUB");
+            _r = bestR;
+            _x = bestX;
+
+            _isCalced = true;
+        }
+        
+        if (_r > 0)
+        {
+            stacker.RotateBlock();
+            _r--;
+        }
+        else if (_x != 0)
+        {
+            int xMove = _x > 0 ? 1 : 0;
+
+            Vector3 vMove = new Vector3(xMove, 0, 0);
+            stacker.CheckAndMove(vMove);
+            _x += (xMove * -1);
+        }
     }
 
     void KI3()
